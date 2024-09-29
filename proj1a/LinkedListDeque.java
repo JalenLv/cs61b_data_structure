@@ -27,23 +27,23 @@ public class LinkedListDeque<T> {
   /**
    * Creates a deep copy of `other`.
    */
-  public LinkedListDeque(LinkedListDeque other) {
-    sentinel = new Node(null, null, null);
-    sentinel.prev = sentinel;
-    sentinel.next = sentinel;
-    size = 0;
-
-    Node prev = sentinel;
-    Node p = other.sentinel.next;
-    while (p != other.sentinel) {
-      prev.next = new Node(p.item, null, prev);
-      prev = prev.next;
-      p = p.next;
-      size++;
-    }
-    prev.next = sentinel;
-    sentinel.prev = prev;
-  }
+  // public LinkedListDeque(LinkedListDeque<T> other) {
+  // sentinel = new Node(null, null, null);
+  // sentinel.prev = sentinel;
+  // sentinel.next = sentinel;
+  // size = 0;
+  //
+  // Node prev = sentinel;
+  // Node p = other.sentinel.next;
+  // while (p != other.sentinel) {
+  // prev.next = new Node(p.item, null, prev);
+  // prev = prev.next;
+  // p = p.next;
+  // size++;
+  // }
+  // prev.next = sentinel;
+  // sentinel.prev = prev;
+  // }
 
   /**
    * Gets the item at the given index, where 0 is the front,
